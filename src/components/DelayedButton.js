@@ -1,10 +1,12 @@
 // Code CoordinatesButton Component Here
 import React from 'react';
 class DelayedButton extends React.Component {
-
+  clickHandler = (event) => {
+    setTimeout(this.props.onDelayedClick, this.props.delay);
+  }
   render() {
     return (
-      <button onClick={ this.cl}>Button</button>
+      <button onClick={ this.clickHandler }>Button</button>
     )
   }
 }
